@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>KAORI’S WORKS　ヤフーダイニング</title>
+
+  <!-- CSS -->
+  <link href="../assets/css/font-awesome.css" rel="stylesheet" media="screen">
+  <link href="/assets/css/style.css" rel="stylesheet" media="screen">
+  <link href="/works/works.css" rel="stylesheet" media="screen">
+  <link href="/assets/css/animate.css" rel="stylesheet" media="screen">
+</head>
+
+
+<body>
+
+  <!-- Preloader -->
+  <div id="wrPreloader" style="display: none;">
+    <div id="elStatus" style="display: none;"></div>
+  </div>
+
+  <!-- Navigation -->
+
+  <header class="header">
+    <nav class="wrNav" role="navigation">
+      <div class="wrContainer">
+        <div class="elNavHeader">
+          <button type="button" class="elNavToggle" data-toggle="collapse" data-target="#elCustomCollapse">
+            <span class="wrNavIcon">navigation</span>
+            <span class="elIcon"></span>
+            <span class="elIcon"></span>
+            <span class="elIcon"></span>
+          </button>
+          <h1><a class="elNavPageTitle" href="../index.html">KAORI’S WORKS</a></h1>
+        </div>
+        <div class="collapse elNavCollapse" id="elCustomCollapse">
+          <ul class="elNavMenu">
+            <li><a href="../index.html#top">Top</a></li>
+            <li><a href="../index.html#profile">Profile</a></li>
+            <li><a href="../index.html#works">Works</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- works start -->
+  <section id="wrWorks" class="wrContent">
+    <div class="wrWorksArea">
+      <div class="elContentArea wow fadeInUp">
+        <h2 class="elWorkTitle">ヤフーダイニング</h2>
+        <div class="elContentLine"></div>
+        <div class="elWorksTopImage wow fadeInUp"><img src="/works/images/im_yahoodining.png" alt="ヤフーダイニングのイメージ図" /></div>
+      </div>
+
+      <div class="elWorksContent wrContentAbout wow fadeInUp">
+        <div class="elContentArea">
+          <h3 class=" elContentTitle">作品概要</h3>
+          <dl class="elWorksAbout">
+            <dt class="elWorksTitle">作品タイトル</dt>
+            <dd class="elWorksText">ヤフーダイニング</dd>
+          </dl>
+          <dl class="elWorksAbout">
+            <dt class="elWorksTitle">作品詳細</dt>
+            <dd class="elWorksText">株式会社ヤフー様で運営/開発されている飲食店予約サービスのページ</dd>
+          </dl>
+          <dl class="elWorksAbout">
+            <dt class="elWorksTitle">作品形態</dt>
+            <dd class="elWorksText">webデザイン</dd>
+          </dl>
+          <dl class="elWorksAbout">
+            <dt class="elWorksTitle">作品環境詳細</dt>
+            <dd class="elWorksText">Internet Explorer 11.xx/Microsoft Edge/Google Chrome 最新環境/Firefox 最新環境/Safari 最新環境</dd>
+          </dl>
+					<dl class="elWorksAbout">
+						<dt class="elWorksTitle">担当箇所</dt>
+						<dd class="elWorksText">SPコーディング/PCコーディング</dd>
+					</dl>
+					<dl class="elWorksAbout">
+						<dt class="elWorksTitle">工数</dt>
+						<dd class="elWorksText">約4日間</dd>
+					</dl>
+					<dl class="elWorksAbout">
+						<dt class="elWorksTitle">チーム人数</dt>
+						<dd class="elWorksText">2人</dd>
+					</dl>
+          <dl class="elWorksAbout">
+            <dt class="elWorksTitle">リリース日</dt>
+            <dd class="elWorksText">2017年7月1日</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="elWorksContent wrContentSchedule wow fadeInUp">
+        <div class="elContentArea">
+          <h3 class="elContentTitle">スケジュール</h3>
+          <ul class="wrSchedule">
+            <li class="elSchedule">
+              <p class="elScheduleTitle">STEP1</p>
+              <p class="elScheduleText">デザイナーとのMTG</p>
+            </li>
+            <li class="elSchedule">
+              <p class="elScheduleTitle">STEP2</p>
+              <p class="elScheduleText">コーディング</p>
+            </li>
+            <li class="elSchedule">
+              <p class="elScheduleTitle">STEP3</p>
+              <p class="elScheduleText">端末での表示確認</p>
+            </li>
+            <li class="elSchedule">
+              <p class="elScheduleTitle">STEP4</p>
+              <p class="elScheduleText">リリース</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="elWorksContent wrContentDetail wow fadeInUp">
+        <div class="elContentArea">
+          <h3 class="elContentTitle">作成プロセスの詳細</h3>
+          <div class="elContentDetail">
+            <p class="elDetailHeader">切り替えパターン別のコーディング</p>
+						<p class="elDetailText">今回のトップページのリニューアルは、movabletypeというCMSを使用しています。ヤフー様のサービスはログイン時/未ログイン時/非会員登録者以外にも切り替え表示に2つほどのパターンがあり、<span class="elStrong">計6パターンの切り替えが発生</span>します。その為、<span class="elStrong">ページを閲覧しているユーザーはこの6つのパターンのうちどこに振り分けられるのかを判断し、そのユーザーに合ったページを表示しなければなりません。</span>その為、今回は<span class="elStrong">一つ一つの要素をモジュール毎に作成し、phpで全て繋げると1ページに見れる様に改修</span>しました。個別にモジュールを分けることで、全てのパターンに共通な部分はそのまま表示し、切り替えが必要な部分は必要な分だけ作成するという効率的な開発になる様に工夫しました。</p>
+          </div>
+        </div>
+      </div>
+      <div class="elWorksContent wrContentDesign wow fadeInUp">
+        <div class="elContentArea">
+          <h3 class="elContentTitle">デザイン概要</h3>
+          <div class="elAboutText">
+            <p class="elAboutTitle">使用ツール</p>
+            <ul class="elAboutDetail elTool">
+              <li>Photoshop</li>
+              <li>html5</li>
+              <li>sass</li>
+              <li>php</li>
+              <li>sourcetree</li>
+              <li>movabletype(cms)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="elButton"><a href="https://reservation.yahoo.co.jp/restaurant/">サイトを見る</a></p>
+    </div>
+    <!-- .contaier -->
+
+  </section>
+  <!-- works end -->
+  <script src="/assets/js/jquery-1.11.1.min.js"></script>
+  <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/assets/js/jquery.parallax-1.1.3.js"></script>
+  <script src="/assets/js/jquery.sticky.js"></script>
+  <script src="/assets/js/smoothscroll.js"></script>
+  <script src="/assets/js/wow.min.js"></script>
+  <script src="/assets/js/jquery.easypiechart.js"></script>
+  <script src="/assets/js/waypoints.min.js"></script>
+  <script src="/assets/js/custom.js"></script>
+</body>

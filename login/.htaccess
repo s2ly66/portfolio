@@ -1,0 +1,20 @@
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+
+order deny,allow
+
+# パスワードページ(limitedWorks.html)
+<Files limitedWorks.html>
+
+# 検索ボットの巡回を弾く設定
+SetEnvIf User-Agent "Googlebot" shutout
+SetEnvIf User-Agent "Slurp" shutout
+
+# ログインページ(hogehoge.comは、自分のサイトのURLに設定する)
+SetEnvIf Referer "^https://hogehoge\.com/login.html" ref_ok
+SetEnvIf Referer "^http://hogehoge\.com/login.html" ref_ok
+
+order Deny,Allow
+Deny from all
+allow from env=ref_ok

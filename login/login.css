@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+/*-----画面共通-----*/
+
+html {
+  font-family: 'Nunito Sans', 'Noto Sans JP', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Varela', sans-serif;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrContainer {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wrContentArea {
+  -webkit-padding-start: 0;
+  -moz-padding-start: 0;
+  padding-inline-start: 0;
+}
+
+.wrContent {
+  padding: 120px 0 100px;
+}
+
+.elContentLine {
+  background: rgba(135, 135, 135, 0.5);
+  width: 100px;
+  height: 1px;
+  margin: 30px auto;
+}
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+/*#nav*/
+.header {
+  position: relative;
+  width: 100%;
+  z-index: 998;
+}
+
+.wrNav {
+  text-transform: uppercase;
+}
+
+.wrNav .elNavHeader:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wrNav,
+.wrNav .dropdown-menu {
+  background: #fff;
+  padding: 0;
+  padding-top: 2px;
+}
+
+.wrNav .elNavPageTitle,
+.wrNav .elNavMenu > li > a {
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: #333;
+}
+
+.wrNav .elNavMenu li.active,
+.wrNav .elNavMenu li a:hover,
+.wrNav .elNavMenu li a:focus,
+.wrNav .elNavMenu > li.active a {
+  background: none;
+  outline: 0;
+  color: #ff0a9b;
+}
+
+.wrNav .elNavPageTitle {
+  font-weight: bold;
+  float: left;
+  padding: 15px 0;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.wrNavIcon {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0
+}
+
+.wrNav .elNavToggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+}
+
+.elNavToggle .elIcon {
+  display: block;
+  background: #ff0a9b;
+  width: 24px;
+  height: 2px;
+  border-radius: 1px
+}
+
+.elNavToggle .elIcon + .elIcon {
+  margin-top: 4px
+}
+
+.collapse {
+  display: none;
+  visibility: hidden
+}
+
+.collapse.in {
+  display: block;
+  visibility: visible
+}
+
+.collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+  transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
+
+.elNavCollapse {
+  overflow-x: visible;
+  -webkit-overflow-scrolling: touch;
+  border-top: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1)
+}
+
+.elNavCollapse.in {
+  overflow-y: auto
+}
+
+.elNavHeader {
+  display: inline-block;
+}
+
+.elNavPageTitle {
+  float: left;
+  height: 50px;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px
+}
+
+
+.elNavMenu {
+  padding-left: 0;
+  list-style: none;
+  margin-top: 0;
+}
+
+.elNavMenu > li {
+  position: relative;
+  display: block
+}
+
+.elNavMenu > li > a {
+  position: relative;
+  display: block;
+  padding: 10px 15px
+}
+
+.elNavMenu > li > a:hover,
+.elNavMenu > li > a:focus {
+  text-decoration: none;
+  background-color: #eee
+}
+
+.elNavMenu > li.disabled > a {
+  color: #777
+}
+
+.elNavMenu > li.disabled > a:hover,
+.elNavMenu > li.disabled > a:focus {
+  color: #777;
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent
+}
+
+.elNavMenu .open > a,
+.elNavMenu .open > a:hover,
+.elNavMenu .open > a:focus {
+  background-color: #eee;
+  border-color: #428bca
+}
+
+.elNavMenu > li > a > img {
+  max-width: none
+}
+
+.elNavMenu > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 20px
+}
+
+.wrNav a,
+.form-control {
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+a,
+.btn {
+  -webkit-transition: all 0.125s ease-in-out 0s;
+  transition: all 0.125s ease-in-out 0s;
+}
+
+.wrWorksList .elHide {
+  display: none;
+}
+
+.elWorksList .elWorksLink {
+  display: block;
+}
+
+.elWorksList .elWorksLink figure {
+  position: relative;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  background: #3085a3;
+  text-align: center;
+  cursor: pointer;
+}
+
+.elWorksList .elWorksLink figure img {
+  position: relative;
+  display: block;
+  min-height: 100%;
+  max-width: 100%;
+}
+
+.elWorksList .elWorksLink figure figcaption {
+  padding-top: 15px;
+  color: #fff;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.elWorksList .elWorksLink figure figcaption::before,
+.elWorksList .elWorksLink figure figcaption::after {
+  pointer-events: none;
+}
+
+.elWorksList .elWorksLink figure figcaption,
+.elWorksList .elWorksLink figure figcaption > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.elWorksList .elWorksLink figure .elDay {
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.elWorksList .elWorksLink figure img {
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+
+.elWorksList .elWorksLink figure:hover img {
+  opacity: 0.4;
+}
+
+.elWorksList .elWorksLink figure figcaption::before,
+.elWorksList .elWorksLink figure figcaption::after {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+  left: 8px;
+  content: '';
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+}
+
+.elWorksList .elWorksLink figure figcaption::before {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.elWorksList .elWorksLink figure figcaption::after {
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+  -webkit-transform: scale(1, 0);
+  transform: scale(1, 0);
+}
+
+.elWorksList .elWorksLink figure .elProductTitle {
+  font-size: 20px;
+  padding-top: 10%;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0);
+  color: #fff;
+}
+
+.elWorksList .elWorksLink figure .elProductTitle,
+.elWorksList .elWorksLink figure .elDay {
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0);
+}
+
+.elWorksList .elWorksLink figure:hover figcaption::before,
+.elWorksList .elWorksLink figure:hover figcaption::after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.elWorksList .elWorksLink figure:hover .elProductTitle,
+.elWorksList .elWorksLink figure:hover .elDay {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+#works .wrContentArea .elButton {
+  width: 60%;
+  margin: 0 auto;
+}
+
+#works .wrContentArea .elButton a {
+  display: block;
+  color: #fff;
+  background-color: #ff0a9b;
+  font-weight: bold;
+  padding: 10px;
+  width: 70%;
+  border-radius: 4px;
+  margin: 48px auto 0;
+  text-align: center;
+}
+
+#password form {
+  margin: 0 auto;
+  position: relative;
+}
+
+#password form .elEnter {
+  width: 50%;
+  display: block;
+  margin: 40px auto 0;
+  border: #c5c5c5 solid 1px;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 40px;
+  padding: 12px;
+  letter-spacing: 4px;
+}
+
+#password .elText {
+  margin: 70px auto 20px;
+  text-align: center;
+
+}
+
+#password form .elPassButton {
+  padding-inline-start: 0;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 24px auto 0;
+}
+
+#password form .elPassButton li + li {
+  margin-left: 20px;
+}
+
+#password form .elPassButton li input {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background: #2f2f2f;
+  min-width: 90px;
+  padding: 8px 8px 6px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  border: none;
+}
+
+#password form .elPassButton li .elSendButton {
+  background: #ff0a9b;
+  min-width: 90px;
+}
+
+#password form .elPassButton li .elResetButton {
+  background: #2f2f2f;
+  min-width: 90px;
+}
+
+/*#scroll-up*/
+
+.elScrollUp {
+  position: fixed;
+  display: none;
+  z-index: 999;
+  bottom: 2em;
+  right: 2em;
+}
+
+.elScrollUp a {
+  background-color: rgba(241, 43, 140, 0.7);
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 15px;
+  line-height: 30px;
+  border-radius: 50%;
+}
+
+.elScrollUp a:hover,
+.elScrollUp a:active {
+  background-color: rgba(241, 43, 140, 0.3);
+  color: #ffffff;
+}
+
+
+.btnScroll {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -15px;
+  display: block;
+  z-index: 10;
+  text-align: center;
+}
+
+.btnScroll span {
+  position: relative;
+  color: #fff;
+  top: 10px;
+}
+
+@-webkit-keyframes drop {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes drop {
+  0% {
+    top: 0px;
+    opacity: 0;
+  }
+
+  30% {
+    top: 10px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/*-----PC画面-----*/
+
+@media (min-width:768px) {
+
+  .wrContainer {
+    width: 750px;
+  }
+
+  .wrContainer:after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+
+  .elContentArea {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+
+  /*トップ以外の共通*/
+  h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  /* #nav*/
+
+  .elNavToggle {
+    display: none
+  }
+
+  .elNavCollapse {
+    width: auto;
+    border-top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    float: right;
+  }
+
+  .elNavCollapse.collapse {
+    display: inline-block;
+    height: auto;
+    padding-bottom: 0;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  .wrContainer > .elNavHeader,
+  .container-fluid > .elNavHeader,
+  .wrContainer > .elNavCollapse,
+  .container-fluid > .elNavCollapse {
+    margin-right: 0;
+    margin-left: 0
+  }
+
+  .elNavMenu {
+    margin-right: -15px
+  }
+
+  .elNavMenu ~ .elNavMenu {
+    margin-right: 0
+  }
+
+  .elNavMenu {
+    margin: 0;
+  }
+
+  .elNavMenu > li {
+    float: left
+  }
+
+  .elNavMenu > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px
+  }
+
+  /* #work*/
+
+  .wrWorksList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 970px;
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-inline-start: 0;
+  }
+
+  .elWorksList {
+    width: 31%;
+    display: inline-block;
+    margin: 0 1%;
+    position: relative;
+    clear: both;
+    max-width: 100%;
+    list-style: none;
+    text-align: center;
+  }
+
+
+  #password .elContentArea {
+    margin-top: 40px;
+  }
+
+  #contact .elMailButton {
+    display: block;
+    color: #fff;
+    background-color: #ff0a9b;
+    font-weight: bold;
+    padding: 10px;
+    width: 400px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 40px auto 0;
+    font-size: 16px;
+  }
+}
+
+#password form .elPassButton {
+  margin: 40px 0 0 34%;
+  padding-inline-start: 0;
+  padding-inline-start: 0;
+  position: absolute;
+  left: 50%;
+  margin-left: -110px;
+}
+
+@media (min-width:992px) {
+  .wrContainer {
+    width: 970px;
+  }
+}
+
+/*-----SP画面-----*/
+
+@media (max-width:767px) {
+
+  h2 {
+    font-size: 30px;
+    margin: 0 0 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  .elSkillTitle {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .elSkillList .elSkillTitle {
+    margin: 0;
+  }
+
+  .elSkillList .elSkillIcon img {
+    margin-bottom: 12px;
+  }
+
+  #works .wrContentArea {
+    -webkit-padding-start: 0;
+    -moz-padding-start: 0;
+    padding-inline-start: 0;
+  }
+
+  #works .wrWorksList .elWorksLink figure {
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+    min-width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: #3085a3;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  #works .wrContentArea .elButton {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  #password .elMailButton {
+    display: block;
+    color: #fff;
+    background-color: #ff0a9b;
+    font-weight: bold;
+    padding: 10px;
+    width: 70%;
+    border-radius: 4px;
+    margin: 24px auto 0;
+    text-align: center;
+  }
+
+  #password form .elPassButton {
+    width: 100%;
+  }
+
+  #password form .elEnter {
+    width: 90%;
+  }
+}

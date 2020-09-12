@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+/*-----画面共通-----*/
+
+html {
+  font-family: 'Nunito Sans', 'Noto Sans JP', sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-size: 12px;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font-family: 'Varela', sans-serif;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+#wrWorks .wrContentArea {}
+
+#wrWorks .wrContentArea h2 {
+  font-size: 24px;
+}
+
+#wrWorks .elContentArea .elWorksTopImage {
+  margin: 70px 0 40px 0;
+}
+
+#wrWorks .elWorksContent .elContentTitle {
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+
+}
+
+/*-----作品概要-----*/
+#wrWorks .wrContentAbout {
+  background-color: #f5f5f5;
+  padding-top: 32px:
+}
+
+/*-----スケジュール-----*/
+
+#wrWorks .wrContentSchedule {
+  background-color: #fff;
+}
+
+/*-----作品概要-----*/
+
+#wrWorks .elWorksContent .elWorksTitle {
+  font-weight: bold;
+}
+
+/*-----詳細-----*/
+
+#wrWorks .wrContentDetail {
+  background-color: #f5f5f5;
+}
+
+#wrWorks .wrContentDetail p {
+  margin: 0;
+}
+
+#wrWorks .elContentDetail + .elContentDetail {
+  margin-top: 28px;
+}
+
+#wrWorks .elDetailHeader {
+  font-weight: bold;
+  padding-bottom: 8px;
+  color: #ff0a9b;
+}
+
+#wrWorks .elDetailText a{
+	color:#ff0a9b;
+}
+
+#wrWorks .elDetailText .elStrong{
+	font-weight:bold;
+}
+
+/*-----デザイン概要-----*/
+
+#wrWorks .wrContentDesign .elAboutText {
+  margin-top: 24px;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elAboutTitle {
+  font-weight: bold;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elColor {
+  padding-inline-start: 0;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elColor .elColorSample {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elColor .elColorSample + .elColorSample {
+  margin-left: 12px;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elTool {
+  display: inline-block;
+  width: 80%;
+  padding-inline-start: 0;
+}
+
+#wrWorks .wrContentDesign .elAboutText .elTool li {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.elButton a {
+  display: block;
+  color: #fff;
+  background-color: #ff0a9b;
+  font-weight: bold;
+  padding: 10px;
+  width: 70%;
+  border-radius: 4px;
+  margin: 24px auto 0;
+  text-align: center;
+  font-size: 16px;
+}
+
+/*-----PC画面のみ-----*/
+@media (min-width:768px) {
+
+  #wrWorks .elContentArea {
+    margin: 0 auto;
+    width: 750px;
+  }
+
+  #wrWorks .elWorksContent {
+    width: 100%;
+  }
+
+  #wrWorks .elWorksContent .elWorksAbout {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  #wrWorks .elWorksContent .elWorksTitle {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+  }
+
+  #wrWorks .elWorksContent .elWorksText {
+    display: inline-block;
+    width: 80%;
+  }
+
+  /*-----作品概要-----*/
+  #wrWorks .wrContentAbout {
+    background-color: #f5f5f5;
+    padding: 32px 0 60px;
+  }
+
+  /*-----スケジュール-----*/
+
+  #wrWorks .elWorksContent.wrContentSchedule {
+    padding: 32px 0 60px;
+  }
+
+  #wrWorks .elWorksContent .wrSchedule {
+    padding-inline-start: 0;
+    text-align: center;
+  }
+
+  #wrWorks .elWorksContent .elSchedule {
+    border: solid 2px #ff0a9b;
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 170px;
+    height: 170px;
+    display: inline-block;
+  }
+
+  #wrWorks .elWorksContent .elSchedule:nth-child(1) {
+    margin-right: 12px;
+  }
+
+  #wrWorks .elWorksContent .elSchedule + .elSchedule {
+    margin-right: 12px;
+  }
+
+  #wrWorks .elWorksContent .elSchedule .elScheduleTitle {
+    font-weight: bold;
+    display: block;
+    color: #ff0a9b;
+    text-align: center;
+    margin-top: 36px;
+  }
+
+  #wrWorks .elWorksContent .elSchedule .elScheduleText {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  /*-----詳細-----*/
+
+  #wrWorks .wrContentDetail {
+    padding: 32px 0 60px;
+  }
+
+  /*-----デザイン概要-----*/
+
+  #wrWorks .wrContentDesign {
+    padding-top: 32px;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText .elAboutTitle {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText .elAboutDetail {
+    display: inline-block;
+    width: 80%;
+    vertical-align: top;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText .elTool {
+    display: inline-block;
+    width: 80%;
+    padding-inline-start: 0;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText .elTool li {
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  .elButton {
+    margin-top: 40px;
+  }
+
+  .elButton a {
+    display: block;
+    color: #fff;
+    background-color: #ff0a9b;
+    font-weight: bold;
+    padding: 10px;
+    width: 40%;
+    border-radius: 4px;
+    margin: 24px auto 0;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  #wrWorks .elContentArea {
+    margin: 0 auto;
+    width: 970px;
+  }
+}
+
+/*-----SP画面のみ-----*/
+
+@media (max-width:767px) {
+  .elContentArea {
+    padding: 0 15px 60px;
+  }
+
+  #wrWorks .elWorksContent .elWorksAbout + .elWorksAbout {
+    margin-bottom: 16px;
+  }
+
+  #wrWorks .elWorksContent .elWorksText {
+    margin-top: 4px;
+    margin-inline-start: 0;
+  }
+
+  /*-----スケジュール-----*/
+
+  #wrWorks .elWorksContent.wrContentSchedule {
+    padding: 32px 0 0;
+  }
+
+  #wrWorks .elWorksContent .wrSchedule {
+    padding-inline-start: 0;
+    border: solid 1px #ff0a9b;
+    border-radius: 4px;
+    padding: 12px 20px;
+    background-color: #fff;
+  }
+
+  #wrWorks .elWorksContent .elSchedule .elScheduleTitle {
+    font-weight: bold;
+    display: inline-block;
+    color: #ff0a9b;
+    margin-right: 12px;
+  }
+
+  #wrWorks .elWorksContent .elSchedule .elScheduleText {
+    display: inline-block;
+  }
+
+  /*-----詳細-----*/
+
+  #wrWorks .wrContentDetail {
+    padding-top: 32px;
+  }
+
+  #wrWorks .wrContentDetail .elContentTitle {
+    margin-bottom: 12px;
+  }
+
+  /*-----デザイン概要-----*/
+
+  #wrWorks .wrContentDesign .elContentArea {
+    padding: 32px 15px 0;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText + .elAboutText {
+    margin-bottom: 32px;
+  }
+
+  #wrWorks .wrContentDesign .elAboutText .elTool {
+    margin-top: 0;
+    width: 100%;
+  }
+
+}
