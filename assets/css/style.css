@@ -395,8 +395,8 @@ a,
 
 #profile .wrProfileHeader .elTextDetail {
   text-align: center;
-  margin: 12px auto 0;
-
+  margin: 16px auto 0;
+  line-height: 1.5;
 }
 
 #profile .wrProfileHeader .elButton a {
